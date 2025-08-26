@@ -41,3 +41,6 @@ OpenAPI spec (JSON):
 
 ## 📂 Upload News Data (File Upload)
 curl -F "file=@news_data.json" http://localhost:8080/api/v1/admin/load
+
+## 📂 Postman collection
+[contextual-news-api.postman_collection.json](src%2Fmain%2Fresources%2Fcontextual-news-api.postman_collection.json)

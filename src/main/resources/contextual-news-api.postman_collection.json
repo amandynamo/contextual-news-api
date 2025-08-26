@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "e762a5d6-a4d4-4ba5-ba5a-1baf66bdd1ee",
+		"name": "contextual-news-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45076923",
+		"_collection_link": "https://amansharma-1798275.postman.co/workspace/Aman-Sharma's-Workspace~8f3341e2-0af7-4c74-8516-d44bb267a0b9/collection/45076923-e762a5d6-a4d4-4ba5-ba5a-1baf66bdd1ee?action=share&source=collection_link&creator=45076923"
+	},
+	"item": [
+		{
+			"name": "category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/news/category?name=Technology",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						"category"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Technology"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "source",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/news/source?name=DW",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						"source"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "DW"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "score",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/news/score?threshold=0.7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						"score"
+					],
+					"query": [
+						{
+							"key": "threshold",
+							"value": "0.7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/news/search?query=Elon Musk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "Elon Musk"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nearby",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/news/nearby?lat=37.4220&lon=-122.0840&radiusKm=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						"nearby"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "37.4220"
+						},
+						{
+							"key": "lon",
+							"value": "-122.0840"
+						},
+						{
+							"key": "radiusKm",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "events",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"c1548bec-1414-46fb-a7cc-c04fd160b6w8\",\r\n    \"articleId\": \"articleId_aman\",\r\n    \"type\": \"world\",\r\n    \"latitude\": 37.42,\r\n    \"longitude\": -122.08\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/news/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"news",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "trending",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
