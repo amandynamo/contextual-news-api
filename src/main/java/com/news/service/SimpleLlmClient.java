@@ -1,6 +1,7 @@
 package com.news.service;
 
 import com.news.dto.LlmExtraction;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 
@@ -10,12 +11,12 @@ import java.util.regex.Pattern;
 
 
 @Component
+@Profile("simple")
 public class SimpleLlmClient implements LlmClient {
     private static final Pattern ENTITY_PATTERN = Pattern.compile("[A-Z][a-z]+(?: [A-Z][a-z]+)*");
 
     @Override
     public LlmExtraction extract(String userQuery, Double lat, Double lon) {
-// Very naive extraction to keep the app runnable without external keys.
         List<String> entities = new ArrayList<>();
         Matcher m = ENTITY_PATTERN.matcher(userQuery);
         while (m.find()) entities.add(m.group());
