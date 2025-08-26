@@ -1,0 +1,17 @@
+server:
+port: 8080
+spring:
+data:
+mongodb:
+uri: mongodb://localhost:27017/newsdb
+jackson:
+serialization:
+WRITE_DATES_AS_TIMESTAMPS: false
+app:
+llm:
+provider: simple # values: simple | openai
+openai:
+apiKey: ${OPENAI_API_KEY:}
+model: gpt-4o-mini
+trending:
+cacheTtlSeconds: 60
